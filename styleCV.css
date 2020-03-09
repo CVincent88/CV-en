@@ -5,10 +5,12 @@
 Initialisation de la grille pour disposer le Titre + corps du CV
    ----------------------------------------------------------------  */
 
-body{
-
+*{
     box-sizing: border-box;
-    
+}
+
+
+body{
     font-family: "Montserrat", "Sans-Serif";
     font-size: 16px;
     line-height: 1.3;
@@ -18,7 +20,6 @@ body{
     background-color: #ECEFF1;
 
     display: grid;
-    height: 1745px;
     grid-template-areas:
         "photo header header header"
         "nav   main   main   main"
@@ -27,7 +28,7 @@ body{
         "nav   main   main   main";
 
     grid-template-columns: 28% 1fr 1fr 1fr;
-    grid-template-rows: 15% 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 1fr 1fr 1fr;
 }
 
 body h1, body h2, body h3{
@@ -36,7 +37,7 @@ body h1, body h2, body h3{
 
 /* Propriétés sidebar */
 
-.maphoto{
+.fig-maphoto{
     grid-area: photo;
 
     background-color: #42A5F5;
@@ -48,7 +49,7 @@ body h1, body h2, body h3{
 
 }
 
-.maphoto figcaption{
+.fig-maphoto figcaption{
     display: none;
 }
 
@@ -69,7 +70,7 @@ body h1, body h2, body h3{
     margin: 30px;
 }
 
-.sidebar .maphoto{
+.sidebar .fig-maphoto{
     text-align: center;
     margin: 45px 0;
 }
@@ -85,42 +86,46 @@ body h1, body h2, body h3{
 
 }
 
-.contact em{
+.sidebar-contact em{
     font-style: normal;
     font-weight: 600;
     color: black;
 }
 
-.aproposdemoi{
+.sidebar-aproposdemoi{
     flex: 1;
 }
 
-.loisirs h1{
+
+
+.sidebar-loisirs h1{
     margin-bottom: 30px;
 }
 
-.iconesloisirs{
+.sidebar-loisirs__icones{
     display: flex;
     justify-content: space-around;
     margin: 0 45px 30px;
 }
+.sidebar-loisirs__icones i.fas{
 
-.iconesloisirs .fas{
+    min-width: 60px;
+    min-height: 60px;
+    border: 3px solid black;
+    line-height: 1.5em;
+
     color: #212121;
     border-radius: 50%;
-    border: 3px solid #212121;
-    margin: 5px;
+    margin: 9px;
     font-weight: 600;
     font-size: 2.6em;
 }
 
-.fa-border{
-    padding: 6px;
-}
-
-.iconesloisirs .fa-atom{
+.sidebar-loisirs__icones .fa-atom{
     display: none;
 }
+
+
 
 
 
@@ -131,7 +136,7 @@ body h1, body h2, body h3{
     margin: 8% 0 0 7%;
 }
 
-.moi .prenomnom{
+.moi__prenomnom{
     margin-top: 0;
     margin-bottom: 0.4rem;
     font-size: 3em;
@@ -139,19 +144,19 @@ body h1, body h2, body h3{
 
 }
 
-.prenomnom mark{
+.moi__prenomnom mark{
     background-color: #ECEFF1;
     color: #42A5F5;
     text-transform: uppercase;
     font-weight: 500;
 }
 
-.statutpro{
+.moi__statutpro{
     font-size: 1.7em;
     margin: 0;
 }
 
-.statutpro em{
+.moi__statutpro em{
     border-bottom: 1px solid #42A5F5;
     font-style: normal;
 }
@@ -184,7 +189,7 @@ body h1, body h2, body h3{
     margin-right: 15px;
 }
 
-.formation{
+.corpsCV-formation{
     margin-bottom: 25px;
 }
 
@@ -192,29 +197,29 @@ body h1, body h2, body h3{
     display: flex;
 }
 
-.date_lieu{
+.bloc_info-date_lieu{
     width: 35%;
     position: relative;
 }
 
 
-.date_lieu::before{
+.bloc_info-date_lieu::before{
     position: absolute;
     left: -10px;
     content: "• ";
 }
 
-.bloc_paragraphe{
+.bloc_info-bloc_paragraphe{
     width: 70%;
     min-width: 300px;
 }
 
-.bloc_paragraphe p{
+.bloc_info-bloc_paragraphe p{
     margin: 10px 0;
     letter-spacing: 1px;
 }
 
-.bloc_paragraphe em{
+.bloc_info-bloc_paragraphe em{
     border-bottom: 1px solid #42A5F5;
     font-style: normal;
 }
@@ -223,26 +228,26 @@ body h1, body h2, body h3{
     margin-bottom: 30px;
 }
 
-.bloc_references{
+.corpsCV-bloc_references{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
-.references{
+.bloc_references-references{
     display: flex;
     justify-content: space-between;
 }
 
-.references p{
+.bloc_references-references p{
     line-height: 1.1em;
 }
 
-.ref1{
+.references__ref1{
     margin-right: 10px;
 }
 
-.ref2{
+.references__ref2{
     padding-left: 20px;
 }
 
@@ -258,7 +263,7 @@ body h1, body h2, body h3{
 
 
 
-@media screen and (max-width: 860px) and (min-width: 596px){
+@media screen and (max-width: 860px) and (min-width: 615px){
     body{
         grid-template-areas:
         "photo header header"
@@ -267,10 +272,10 @@ body h1, body h2, body h3{
         "nav    nav    nav ";
 
     grid-template-columns: 28% 1fr 1fr;
-    grid-template-rows: 14% auto auto;
+    grid-template-rows: 9% auto auto auto;
     }
 
-    .maphoto{
+    .fig-maphoto{
         padding-top: 25px;
         background-color: #42A5F5
     }
@@ -284,16 +289,16 @@ body h1, body h2, body h3{
 
     }
 
-    .prenomnom{
+    .moi__prenomnom{
         background-color: #42A5F5;
     }
 
-    .prenomnom mark{
+    .moi__prenomnom mark{
         color: #ECEFF1;
         background-color: #42A5F5;
     }
 
-    .statutpro em{
+    .moi__statutpro em{
         border-bottom: 1px solid #ECEFF1;
     }
 
@@ -304,41 +309,46 @@ body h1, body h2, body h3{
         flex-wrap: wrap;
     }
 
-    .contact{
+    .sidebar-contact{
         min-width: 50%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
-    .contact p{
+    .sidebar-contact p{
         text-align: center;
-        border-right: 1px solid black;
+        margin: 20px 0;
     }
 
-    .aproposdemoi{
+    .sidebar-aproposdemoi{
         min-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
 
-    .aproposdemoi p{
+    .sidebar-aproposdemoi p{
+        margin: 0;
+        padding: 30px;
+        border-left: 1px solid black;
+    }
+
+    .sidebar-loisirs{
         flex: 1;
     }
 
-
-    .loisirs{
-        flex: 1;
-    }
-
-    .iconesloisirs .fa-atom{
+    .sidebar-loisirs__icones .fa-atom{
     display:inline-block;
     }
 
-    .ref1{
+    .references__ref1{
         width: 45%;
         text-align: center;
     }
 
-    .ref2{
+    .references__ref2{
         width: 45%;
         text-align: center;
     }
@@ -348,7 +358,7 @@ body h1, body h2, body h3{
    ------------------------------------------------------------------------ */
 
 
-@media screen and (max-width:595px){
+@media screen and (max-width:614px){
     body{
         grid-template-areas:
         "header"
@@ -358,7 +368,7 @@ body h1, body h2, body h3{
         "nav";
 
     grid-template-columns: 1fr;
-    grid-template-rows: 9% auto;
+    grid-template-rows: 5% auto;
     }
 
     .moi{
@@ -371,26 +381,26 @@ body h1, body h2, body h3{
         text-align: center;
     }
 
-    .prenomnom mark{
+    .moi__prenomnom mark{
         color: #ECEFF1;
         background-color: #42A5F5;
     }
 
-    .statutpro em{
+    .moi__statutpro em{
     border-bottom: 1px solid #ECEFF1;
     }
 
 
-    .maphoto{
+    .fig-maphoto{
         padding: 20px 0 20px 0;
         background-color: #42A5F5
     }
 
-    .contact p{
+    .sidebar-contact p{
         text-align: center;
     }
 
-    .iconesloisirs .fa-atom{
+    .sidebar-loisirs__icones .fa-atom{
     display:none;
     }
 
@@ -399,7 +409,7 @@ body h1, body h2, body h3{
         margin: 20px 25px;
     }
 
-    .formation, experience_pro{
+    .corpsCV-formation, experience_pro{
         display: flex;
         flex-direction: column;
     }
@@ -413,37 +423,37 @@ body h1, body h2, body h3{
         margin-bottom: 20px;
     }
 
-    .bloc_paragraphe{
+    .bloc_info-bloc_paragraphe{
         width: 100%;
     }
 
-    .bloc_paragraphe em{
+    .bloc_info-bloc_paragraphe em{
         border: 0;
     }
 
-    .bloc_paragraphe h3{
+    .bloc_info-bloc_paragraphe h3{
         margin: 13px 0;
     }
 
-    .date_lieu{
+    .bloc_info-date_lieu{
         width: 100%;
         text-align: center;
         margin-bottom: 0;
     }
 
-    .date_lieu em{
+    .bloc_info-date_lieu em{
         text-decoration-color: #42A5F5;
     }
 
-    .date_lieu::before{
+    .bloc_info-date_lieu::before{
         display: none;
     }
 
-    .references{
+    .bloc_references-references{
         flex-direction: column;
     }
 
-    .ref1, .ref2{
+    .references__ref1, .references__ref2{
         padding: 2px;
         margin-bottom: 20px;
         line-height: .6;
@@ -456,7 +466,7 @@ body h1, body h2, body h3{
    ------------------------------------------------------------------------ */
 
 
-@media screen and (max-width:375px){
+@media screen and (max-width:385px){
     body{
         font-size: .8em;
     }
