@@ -37,7 +37,6 @@ body h1, body h2, body h3{
 
 .fig-maphoto{
     grid-area: photo;
-
     background-color: #42A5F5;
 
     margin: 0;
@@ -80,8 +79,6 @@ body h1, body h2, body h3{
     font-size: 1.4rem;
     text-align: center;
     padding: 2px 0;
-
-
 }
 
 .sidebar-contact em{
@@ -94,26 +91,20 @@ body h1, body h2, body h3{
     flex: 1;
 }
 
-
-
-.sidebar-loisirs h1{
-    margin-bottom: 30px;
-}
-
 .sidebar-loisirs__icones{
     display: flex;
     justify-content: space-around;
-    margin: 0 45px 30px;
+    margin: 30px 45px 30px;
 }
-.sidebar-loisirs__icones i.fas{
+.sidebar-loisirs__icones i{
 
     min-width: 60px;
     min-height: 60px;
     border: 3px solid #212121;
+    border-radius: 50%;
     line-height: 1.5em;
 
     color: #212121;
-    border-radius: 50%;
     margin: 9px;
     font-weight: 600;
     font-size: 2.6em;
@@ -125,25 +116,22 @@ body h1, body h2, body h3{
 
 
 
-
-
 /* Propriétés du corps du CV */
 
 .moi{
     grid-area: header;
-    margin: 90px 0 0 7%;
+    margin: 80px 0 0 7%;
 }
 
 .moi__prenomnom{
     margin-top: 0;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2em;
     font-size: 3em;
     font-weight: lighter;
 
 }
 
-.moi__prenomnom mark{
-    background-color: #ECEFF1;
+.moi__prenomnom strong{
     color: #42A5F5;
     text-transform: uppercase;
     font-weight: 500;
@@ -182,12 +170,12 @@ body h1, body h2, body h3{
     font-style: normal;
 }
 
-.corpsCV .fas{
+.corpsCV i{
     color: #42A5F5;
     margin-right: 15px;
 }
 
-.corpsCV-formation{
+.formation{
     margin-bottom: 25px;
 }
 
@@ -209,7 +197,7 @@ body h1, body h2, body h3{
 
 .bloc_info-bloc_paragraphe{
     width: 70%;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 .bloc_info-bloc_paragraphe p{
@@ -226,7 +214,7 @@ body h1, body h2, body h3{
     margin-bottom: 30px;
 }
 
-.corpsCV-bloc_references{
+.bloc_references{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
@@ -268,8 +256,8 @@ body h1, body h2, body h3{
         "main   main "
         "nav    nav  ";
 
-    grid-template-columns: 28% 1fr;
-    grid-template-rows: 9% auto;
+        grid-template-columns: 28% 1fr;
+        grid-template-rows: 9% auto;
     }
 
     .fig-maphoto{
@@ -278,32 +266,34 @@ body h1, body h2, body h3{
     }
 
     .moi{
+        grid-area: header;
         margin: 0;
         padding-top: 56px;
         padding-left: 39px;
-        grid-area: 1 / 2 / 2 / 4;
-        background-color: #42A5F5;
-
-    }
-
-    .moi__prenomnom{
         background-color: #42A5F5;
     }
 
-    .moi__prenomnom mark{
+    .moi__prenomnom strong{
         color: #ECEFF1;
-        background-color: #42A5F5;
     }
 
     .moi__statutpro em{
         border-bottom: 1px solid #ECEFF1;
     }
 
+    .references__ref1{
+        width: 45%;
+        text-align: center;
+    }
+
+    .references__ref2{
+        width: 45%;
+        text-align: center;
+    }
 
     .sidebar{
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     .sidebar-contact{
@@ -321,9 +311,6 @@ body h1, body h2, body h3{
 
     .sidebar-aproposdemoi{
         min-width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
     }
 
     .sidebar-aproposdemoi p{
@@ -340,15 +327,6 @@ body h1, body h2, body h3{
     display:inline-block;
     }
 
-    .references__ref1{
-        width: 45%;
-        text-align: center;
-    }
-
-    .references__ref2{
-        width: 45%;
-        text-align: center;
-    }
 }
 
 /* ------------------------------------------------------------------------                RESPONSIVE MOBILE LARGE SCREEN
@@ -377,9 +355,8 @@ body h1, body h2, body h3{
         text-align: center;
     }
 
-    .moi__prenomnom mark{
+    .moi__prenomnom strong{
         color: #ECEFF1;
-        background-color: #42A5F5;
     }
 
     .moi__statutpro em{
@@ -389,23 +366,22 @@ body h1, body h2, body h3{
 
     .fig-maphoto{
         padding: 20px 0 20px 0;
-        background-color: #42A5F5
     }
 
-    .sidebar-contact p{
+    .corpsCV{
         text-align: center;
     }
 
     .sidebar-loisirs__icones .fa-atom{
-    display:none;
+        display:none;
     }
 
     .corpsCV h2{
-        text-align: center;
+
         margin: 20px 25px;
     }
 
-    .corpsCV-formation, experience_pro{
+    .formation, .experience_pro{
         display: flex;
         flex-direction: column;
     }
@@ -414,7 +390,6 @@ body h1, body h2, body h3{
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
         line-height: 1.2;
         margin-bottom: 20px;
     }
@@ -433,7 +408,6 @@ body h1, body h2, body h3{
 
     .bloc_info-date_lieu{
         width: 100%;
-        text-align: center;
         margin-bottom: 0;
     }
 
@@ -454,6 +428,10 @@ body h1, body h2, body h3{
         margin-bottom: 20px;
         line-height: .6;
         width: 100%;
+
+    }
+
+    .sidebar-contact p{
         text-align: center;
     }
 }
