@@ -5,12 +5,10 @@
 Initialisation de la grille pour disposer le Titre + corps du CV
    ----------------------------------------------------------------  */
 
-*{
-    box-sizing: border-box;
-}
 
 
 body{
+    box-sizing: border-box;
     font-family: "Montserrat", "Sans-Serif";
     font-size: 16px;
     line-height: 1.3;
@@ -28,7 +26,7 @@ body{
     grid-template-rows: 250px 1fr;
 }
 
-body h1, body h2, body h3{
+h1, h2, h3{
     text-transform: uppercase;
 
 }
@@ -72,7 +70,7 @@ body h1, body h2, body h3{
     margin: 45px 0;
 }
 
-.sidebar h1{
+.sidebar_titre{
     background-color: #424242;
     color: #42A5F5;
     font-weight: 100;
@@ -81,8 +79,7 @@ body h1, body h2, body h3{
     padding: 2px 0;
 }
 
-.sidebar-contact em{
-    font-style: normal;
+.sidebar-contact span{
     font-weight: 600;
     color: black;
 }
@@ -131,7 +128,7 @@ body h1, body h2, body h3{
 
 }
 
-.moi__prenomnom strong{
+.moi__prenomnom b{
     color: #42A5F5;
     text-transform: uppercase;
     font-weight: 500;
@@ -142,9 +139,8 @@ body h1, body h2, body h3{
     margin: 0;
 }
 
-.moi__statutpro em{
+.moi__statutpro span{
     border-bottom: 1px solid #42A5F5;
-    font-style: normal;
 }
 
 .corpsCV{
@@ -159,16 +155,13 @@ body h1, body h2, body h3{
 
 }
 
-.corpsCV h2{
+.corpsCV_titre{
     border-bottom: 2px solid #42A5F5;
     padding-bottom: 5px;
     margin: 25px 0;
 
 }
 
-.corpsCV em{
-    font-style: normal;
-}
 
 .corpsCV i{
     color: #42A5F5;
@@ -188,11 +181,17 @@ body h1, body h2, body h3{
     position: relative;
 }
 
-
-.bloc_info-date_lieu::before{
+.bullet{
     position: absolute;
-    left: -10px;
-    content: "• ";
+    left: -20px;
+    color: #42A5F5;
+}
+.bullet2{ 
+    position: absolute;
+    left: -20px;
+    top: -13px;
+    color: #42A5F5;
+    font-size: 2em;
 }
 
 .bloc_info-bloc_paragraphe{
@@ -205,9 +204,8 @@ body h1, body h2, body h3{
     letter-spacing: 1px;
 }
 
-.bloc_info-bloc_paragraphe em{
+.bloc_info-bloc_paragraphe span{
     border-bottom: 1px solid #42A5F5;
-    font-style: normal;
 }
 
 .experience_pro{
@@ -260,6 +258,10 @@ body h1, body h2, body h3{
         grid-template-rows: 9% auto;
     }
 
+    .corpsCV{
+        margin: 0 5%;
+    }
+
     .fig-maphoto{
         padding-top: 25px;
         background-color: #42A5F5
@@ -273,11 +275,11 @@ body h1, body h2, body h3{
         background-color: #42A5F5;
     }
 
-    .moi__prenomnom strong{
+    .moi__prenomnom b{
         color: #ECEFF1;
     }
 
-    .moi__statutpro em{
+    .moi__statutpro span{
         border-bottom: 1px solid #ECEFF1;
     }
 
@@ -298,10 +300,8 @@ body h1, body h2, body h3{
 
     .sidebar-contact{
         min-width: 50%;
-        justify-content: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
     }
 
     .sidebar-contact p{
@@ -341,8 +341,12 @@ body h1, body h2, body h3{
         "main"
         "nav";
 
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 5% auto;
+    }
+
+    .corpsCV{
+        margin: 0 5%;
     }
 
     .moi{
@@ -351,15 +355,15 @@ body h1, body h2, body h3{
         background-color: #42A5F5;
     }
 
-    .moi p{
+    .moi{
         text-align: center;
     }
 
-    .moi__prenomnom strong{
+    .moi__prenomnom b{
         color: #ECEFF1;
     }
 
-    .moi__statutpro em{
+    .moi__statutpro span{
     border-bottom: 1px solid #ECEFF1;
     }
 
@@ -376,7 +380,7 @@ body h1, body h2, body h3{
         display:none;
     }
 
-    .corpsCV h2{
+    .corpsCV_titre{
 
         margin: 20px 25px;
     }
@@ -394,15 +398,15 @@ body h1, body h2, body h3{
         margin-bottom: 20px;
     }
 
+    .bloc_info_titre span{
+        border: 0;
+    }
+
     .bloc_info-bloc_paragraphe{
         width: 100%;
     }
 
-    .bloc_info-bloc_paragraphe em{
-        border: 0;
-    }
-
-    .bloc_info-bloc_paragraphe h3{
+    .bloc_info_titre{
         margin: 13px 0;
     }
 
@@ -411,11 +415,7 @@ body h1, body h2, body h3{
         margin-bottom: 0;
     }
 
-    .bloc_info-date_lieu em{
-        text-decoration-color: #42A5F5;
-    }
-
-    .bloc_info-date_lieu::before{
+    .bullet, .bullet2{
         display: none;
     }
 
