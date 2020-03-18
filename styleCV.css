@@ -41,7 +41,10 @@ h1, h2, h3{
 
     text-align: center;
     padding: 45px 0 25px;
+}
 
+.fig-maphoto img{
+    filter: drop-shadow(0 0 2px rgb(58, 17, 58));
 }
 
 .fig-maphoto figcaption{
@@ -229,10 +232,12 @@ h1, h2, h3{
 
 .references__ref1{
     margin-right: 10px;
+    max-width: 50%;
 }
 
 .references__ref2{
     padding-left: 20px;
+    max-width: 50%;
 }
 
 
@@ -247,7 +252,7 @@ h1, h2, h3{
 
 
 
-@media screen and (max-width: 860px) and (min-width: 615px){
+@media screen and (max-width: 920px) and (min-width: 615px){
     body{
         grid-template-areas:
         "photo header"
@@ -264,9 +269,8 @@ h1, h2, h3{
 
     .fig-maphoto{
         padding-top: 25px;
-        background-color: #42A5F5
+        background-color: #42A5F5;
     }
-
     .moi{
         grid-area: header;
         margin: 0;
