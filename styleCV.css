@@ -247,7 +247,7 @@ h1, h2, h3{
 
 
 
-/* ------------------------------------------------------------------------                   RESPONSIVE TABLETTE
+/* -----------------------------------------------------------  -------------                   RESPONSIVE TABLETTE
    ------------------------------------------------------------------------ */
 
 
@@ -351,6 +351,7 @@ h1, h2, h3{
 
     .corpsCV{
         margin: 0 5%;
+        text-align: center;
     }
 
     .moi{
@@ -374,10 +375,6 @@ h1, h2, h3{
 
     .fig-maphoto{
         padding: 20px 0 20px 0;
-    }
-
-    .corpsCV{
-        text-align: center;
     }
 
     .sidebar-loisirs__icones .fa-atom{
@@ -425,6 +422,7 @@ h1, h2, h3{
 
     .bloc_references-references{
         flex-direction: column;
+
     }
 
     .references__ref1, .references__ref2{
@@ -432,6 +430,8 @@ h1, h2, h3{
         margin-bottom: 20px;
         line-height: .6;
         width: 100%;
+        max-width: 100%;
+        text-align: center;
 
     }
 
