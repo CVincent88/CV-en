@@ -448,6 +448,10 @@ h1, h2, h3{
     body{
         font-size: .8em;
     }
+
+    .sidebar-loisirs__icones i{
+        font-size: 3em;
+    }
 }
 
 
