@@ -449,9 +449,12 @@ h1, h2, h3{
         font-size: .8em;
     }
 
+    .sidebar p{
+        color: black;
+    }
+
     .sidebar-loisirs__icones i{
         font-size: 3em;
     }
 }
-
 
