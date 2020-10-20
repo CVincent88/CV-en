@@ -1,155 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://kit.fontawesome.com/a61f28c43a.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styleCV.css" media="screen">
-        <title>CV Côme VINCENT</title>
-        <link rel="icon" href="file-alt-regular.svg">
-    </head>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://kit.fontawesome.com/a61f28c43a.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="./public/CSS/style.css" media="screen">
+      <title>CV Côme VINCENT</title>
+      <link rel="icon" href="./public/images/file-alt-regular.svg">
+   </head>
 
-    <body>
-        <figure class="fig-maphoto">
-            <img src="jamespetit.png" alt="Ma photo"/>
-            <figcaption>Ma photo</figcaption>
-        </figure>
+   <body>
+   <figure class="fig-maphoto">
+      <img src="./public/images/photo_profil_head.jpg" alt="Ma photo"/>
+      <figcaption>Ma photo</figcaption>
+   </figure>
 
-        <aside class="sidebar"> <!-- Ouverture sidebar -->
+   <aside class="sidebar"> <!-- Ouverture sidebar -->
+      <div class= "sidebar-section sidebar-contact"> <!-- ouverture boîte contact -->
+         <h2 class="sidebar_titre">Contact</h2>
+         <p><span>Résidence:</span><br> Bordeaux, France</p>
+         <p><span>Téléphone:</span><br> +33 7 49 58 19 26</p>
+         <p><span>Email:</span><br> come.vincent@live.fr</p>
+         <p><span>Portfolio:</span><br> www.webew.com</p>
+         <p><span>LinkedIn:</span><br> www.linkedin.com/in/côme-vincent</p>
+      </div>
 
-                <div class= "sidebar-contact"> <!-- ouverture boîte contact -->
-                    <h2 class="sidebar_titre">Contact</h2>
+      <div class="sidebar-section sidebar-aproposdemoi"> <!-- ouverture boîte À propos de moi -->
+         <h2 class="sidebar_titre">À propos de moi</h2>
 
-                        <p><span>Résidence:</span><br> Montréal, Canada</p>
-                        <p><span>Téléphone:</span><br> +1 (979) 438-4218</p>
-                        <p><span>Courriel:</span><br> come.vincent@gmail.com</p>
-                        <p><span>Site web:</span><br> www.webew.com</p>
-                        <p><span>Skype:</span><br> @come_vincent</p>
-                </div>
+         <p>Rigoureux, polyvalent et récemment diplômé je souhaite mettre mes compétences à votre service tout en continuant à me former. Les différentes professions auxquelles j'ai été confronté m'ont appris à penser et réfléchir autrement, à appréhender les problèmes sous différents angles, à travailler sous pression et à toujours me remettre en question afin de progresser en permanence et d'acquérir une grande ouverture d'esprit.
+      </div>
 
-                <div class="sidebar-aproposdemoi"> <!-- ouverture boîte À propos de moi -->
-                    <h2 class="sidebar_titre">À propos de moi</h2>
+      <div class="sidebar-section sidebar-skills">
+         <h2 class="sidebar_titre">Mes compétences</h2>
+         <ul>
+            <li><strong>Frontend:</strong> HTML5 - CSS3 - Javascript</li>
+            <li><strong>Backend:</strong> PHP - Node.js</li>
+            <li><strong>Frameworks:</strong> VueJS</li>
+            <li><strong>Base de données:</strong> MySQL - MongoDB</li>
+            <li><strong>Langues:</strong></li>
+            <ul>
+               <li>Anglais - Bilingue  </li>
+               <li>Espagnol - Intermédiaire</li>
+            </ul>
+         </ul>
+      </div>
 
-                    <p>Hey ! Salut ! Je m'appelle Côme.<br /> Comme vous pouvez le voir, mon parcours ne fait aucun sens. J'ai une formation de professeur d'anglais, j'ai opéré dans l'assistance médicale et je me retrouve à faire du développement web. Désavantage ? Certainement pas. Ces différents domaines m'ont apris à penser et réfléchir autrement, à appréhender les problèmes sous différents angles, à travailler sous pression et à toujours me remettre en question afin de progresser en permanence et d'acquérir une grande ouverture d'esprit. C'est aussi cette ouverture d'esprit qui m'a permis de découvrir des domaines aussi variés que la littérature, l'astrophysique et l'escalade dans lesquels j'évolue et apprends quotidiennement.</p>
-                </div>
+      <div class="sidebar-section sidebar-attribute">
+         <h2 class="sidebar_titre">Qualités personnelles</h2>
+         <ul>
+            <li>Rigoureux</li>
+            <li>Débrouillard</li>
+            <li>Curieux</li>
+            <li>Attentif</li>
+         </ul>
+      </div>
 
-                <div class= "sidebar-loisirs"> <!-- ouverture boîte Loisirs -->
-                    <h2 class="sidebar_titre">Loisirs</h2>
+      <div class= "sidebar-section sidebar-loisirs"> <!-- ouverture boîte Loisirs -->
+         <h2 class="sidebar_titre">Loisirs</h2>
 
-                    <div class="sidebar-loisirs__icones">
-                        <i class="fas fa-swimmer fa-flip-horizontal fa-fw"></i>
-                        <i class="fas fa-dog  fa-fw"></i>
-                        <i class="fas fa-book fa-fw"></i>
-                        <i class="fas fa-atom fa-fw"></i>
-                    </div>
-
+         <div class="sidebar-icones">
+            <div class="circle">
+               <img src="./public/images/rock_climbing.svg"></img>
             </div>
-        </aside> <!-- Fermeture sidebar -->
+            <i class="fas fa-book fa-fw"></i>
+            <i class="fas fa-gamepad"></i>
+            <i class="fas fa-atom fa-flip-horizontal fa-fw"></i>
+      </div>
 
-        <header class="moi"> <!-- Mon nom et occupation-->
-            <h1 class="moi__prenomnom"><b>Côme </b>VINCENT</h1>
+      </div>
+   </aside> <!-- Fermeture sidebar -->
 
-            <p class="moi__statutpro"><span>Dével</span>oppeur web freelance</p>
-        </header>
+      <header class="moi"> <!-- Mon nom et occupation-->
+         <h1 class="moi__prenomnom"><b>Côme </b>VINCENT</h1>
 
-        <div class="corpsCV"> <!--Corps du CV-->
+         <p class="moi__statutpro"><span>Dével</span>oppeur web</p>
+      </header>
 
-            <section class="formation">
+      <div class="corpsCV"> <!--Corps du CV-->
 
-                    <h2 class="corpsCV_titre"><i class="fas fa-user-graduate"></i> formation</h2>
+         <section class="formation">
 
-                    <article class="bloc_info">
+            <h2 class="corpsCV_titre"><i class="fas fa-user-graduate"></i> formation</h2>
 
-                        <p class="bloc_info-date_lieu">
-                            <span class="bullet"> &#10687;</span> 2012 <br/>
-                            <span>Poitiers - France</span>
-                        </p>
+            <article class="bloc_info">
+               <p class="bloc_info-date_lieu">
+                     <span class="bullet"> &#10687;</span>2020<br/>
+                     <span>Montréal - Canada</span>
+               </p>
+               <div class="bloc_info-bloc_paragraphe">
+                  <h3 class="bloc_info_titre"><span>Open</span>Classrooms</h3>
+                  <p>Formation Développeur Web - Titre RNCP de niveau 5 (RNCP 32173)</p>
+                  <p>Parcours visant à former au développement web par la pratique en enseignant les bases des langages HTML/CSS et Javascript.</p>
+               </div>
+            </article>
 
-                        <div class="bloc_info-bloc_paragraphe">
-                            <h3 class="bloc_info_titre"><span>Unive</span>rsité de Poitiers</h3>
-                            <p>Master Enseignement et Formation - Linguistique Anglaise.</p>
-                            <p>Le master MEEF a pour objectif de préparer à l'exercice du métier d'enseignant ou de documentaliste. Il  doit permettre à chaque étudiant diplômé de savoir se situer dans son environnement professionnel, de maîtriser les outils cognitifs, méthodologiques et techniques permettant d’agir, de construire des situations d’apprentissage adaptées à tous les élèves.</p>
-                        </div>
-                    </article>
+            <article class="bloc_info">
+               <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span>2012<br/>
+               <span>Poitiers - France</span></p>
+                  <div class="bloc_info-bloc_paragraphe">
+                  <h3 class="bloc_info_titre"><span>Unive</span>rsité de Poitiers</h3>
+                  <p>Niveau Master - Master Enseignement et Formation - Linguistique Anglaise.</p>
+                  <p>Le master MEEF a pour objectif de préparer à l'exercice du métier d'enseignant ou de documentaliste. Il  doit permettre de maîtriser les outils cognitifs, méthodologiques et techniques permettant d’agir, de construire des situations d’apprentissage adaptées à tous les élèves.</p>
+               </div>
+            </article>
+         </section>
 
-                    <article class="bloc_info">
+         <section class="bloc_projets_container">
+            <h2 class="corpsCV_titre"><i class="fas fa-pencil-alt"></i>Projets de formation</h2>
+            <div class="bloc_projets">
+               <div class="bloc_projet bloc_projets_1">
+                  <ul>
+                     <li>Création d'un réseau social d'entreprise:</li>
+                     <p class="project-description">Implémentation et gestion d'une base de données sécurisée avec MySQL et Node.JS. Personalisation du contenu envoyé au client web en fonction de son statut. Authentification et maintien de la connexion. Gestion du frontend avec le framework VueJS.</p>
+                     <li>Construction d'une API sécurisée pour une application d'avis gastronomique:</li>
+                     <p class="project-description">Mise en place des opérations CRUD et stockage des données de manière sécurisée avec Node.js. Implémentation d'un modèle logique de données conformément à la réglementation.</p>
+                     <li>Construction de la partie frontend d'un site e-commerce:</li>
+                     <p class="project-description">Validation de données issues du client et gestion des évènements Javascript. Mise en place d'un plan de test pour vérifier le bon fonctionnement du site.</p>
+                     <li>Optimisation du référencement d'un site web existant:</li>
+                     <p class="project-description">Analyse puis amélioration de la taille, de la vitesse et du référencement par les moteurs de recherche d'un site web existant. Vérification de l'accessibilité pour tous du site.</p>
+                     <li>Dynamisation d'une page web:</li>
+                     <p class="project-description">Mise en oeuvre des effets CSS graphique avancés afin de dynamiser une page web.</p>
+                     <li>Intégration d'une maquette:</li>
+                     <p class="project-description">Découpage et intégration d'une maquette avec HTML5/CSS3 et implémentation du design responsive.</p> 
+                  </ul>
+               </div>
+            </div>
+         </section>
 
-                        <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span>     2010<br/><span>Poitiers - France</span></p>
-                            <div class="bloc_info-bloc_paragraphe">
-                            <h3 class="bloc_info_titre"><span>Unive</span>rsité de Poitiers</h3>
-                            <p>Licence LLCE Anglais.</p>
-                            <p>La licence Langues, Littératures et Civilisations Étrangères et Régionales en Anglais est une formation complète qui vise à donner une maîtrise théorique et pratique de la langue anglaise et à apporter de solides connaissances dans les domaines de la littérature, de la civilisation et de l’histoire des pays anglophones </p>
-                        </div>
-                    </article>
-
-
-                </section>
-
-            <section class="experience_pro">
-
-                <h2 class="corpsCV_titre"><i class="fas fa-briefcase"></i> Expérience professionnelle</h2>
-
-                <article class="bloc_info"> 
-
-                    <p class="bloc_info-date_lieu"><span class="bullet">&#10687;</span> 2017 à ajourd'hui<br/><span>Montréal - Canada</span></p>
-
-                    <div class="bloc_info-bloc_paragraphe">
-                        <h3 class="bloc_info_titre"><span>Axa As</span>sistance</h3>
-                        <p>Chargé d'assistance médicale</p>
-                        <p>Gestion de dossier d'assistance médicales pour les voyageurs assurés. Organisation et coordination des rapatriements sanitaires. Mise en place d'assistance à domicile poutr les clients sortant de l'hôpital.</p>
-                    </div>
-
-                </article>
-
-                <article class="bloc_info">
-
-                    <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span> 2017<br/><span>Montréal - Canada</span></p>
-
-                    <div class="bloc_info-bloc_paragraphe">
-                        <h3 class="bloc_info_titre"><span>Group</span>e Europea</h3>
-                        <p>Directeur du service clientèle</p>
-                        <p>Gestion des tâches des chargés de clientèle. Mise en place des stratégies d'upselling. Création des procédures du suivi clientèle.</p>
-                    </div>
-
-                </article>
-
-                <article class="bloc_info">
-
-                    <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span> 2015 - 2017<br/><span>Niort - France</span></p>
-
-                    <div class="bloc_info-bloc_paragraphe">
-                        <h3 class="bloc_info_titre"><span>Inter</span> Mutuelles Assistance</h3>
-                        <p>Chargé d'assistance internationale</p>
-                        <p>Gestion de dossier d'assistance maritime pour navire plaisanciers. Organisation et coordination de l'assistance routière en Europe.
-                        Assistance en direct grâce au système d'urgence embarqué dans les véhicules.</p>
-                    </div>
-
-                </article>
-
-            </section>
-
-            <section class="bloc_references">
-
-                <h2 class="corpsCV_titre"><i class="fas fa-pencil-alt"></i> références</h2>
-
-                <div class="bloc_references-references">
-
-                    <div class="references__ref1">
-                        <p>Paul Robensen</p>
-                        <p>Directeur des opérations - Restaurant Europea</p>
-                        <p>Téléphone: (514) 437-6792</p>
-                        <p>Email: paul.robensen@gmail.com</p>
-                    </div>
-
-                    <div class="references__ref2">
-                        <p>Corinne Tremblay</p>
-                        <p>Manager - Axa Assistance</p>
-                        <p>Téléphone: (514) 736-0989</p>
-                        <p>Email: corinne.tremblay@gmail.com</p>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </body>
+         <section class="experience_pro">
+            <h2 class="corpsCV_titre"><i class="fas fa-briefcase"></i> Expérience professionnelle</h2>
+            <article class="bloc_info"> 
+               <p class="bloc_info-date_lieu"><span class="bullet">&#10687;</span> 2017 à ajourd'hui<br/><span>Montréal - Canada</span></p>
+               <div class="bloc_info-bloc_paragraphe">
+                  <h3 class="bloc_info_titre"><span>Axa As</span>sistance</h3>
+                  <p>Chargé d'assistance médicale</p>
+                  <!-- <p>Gestion de dossier d'assistance médicales pour les voyageurs assurés. Organisation et coordination des rapatriements sanitaires. Mise en place d'assistance à domicile poutr les clients sortant de l'hôpital.</p> -->
+               </div>
+            </article>
+            <article class="bloc_info">
+               <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span> 2017<br/><span>Montréal - Canada</span></p>
+               <div class="bloc_info-bloc_paragraphe">
+                  <h3 class="bloc_info_titre"><span>Group</span>e Europea</h3>
+                  <p>Directeur du service clientèle</p>
+                  <!-- <p>Gestion des tâches des chargés de clientèle. Mise en place des stratégies d'upselling. Création des procédures du suivi clientèle.</p> -->
+               </div>
+            </article>
+            <article class="bloc_info">
+               <p class="bloc_info-date_lieu"><span class="bullet2">&#8226;</span> 2015 - 2017<br/><span>Niort - France</span></p>
+               <div class="bloc_info-bloc_paragraphe">
+                  <h3 class="bloc_info_titre"><span>Inter</span> Mutuelles Assistance</h3>
+                  <p>Chargé d'assistance internationale</p>
+                  <!-- <p>Gestion de dossier d'assistance maritime pour navire plaisanciers. Organisation et coordination de l'assistance routière en Europe. -->
+                  <!-- Assistance en direct grâce au système d'urgence embarqué dans les véhicules.</p> -->
+               </div>
+            </article>
+         </section>
+      </div>
+   </body>
 </html>
