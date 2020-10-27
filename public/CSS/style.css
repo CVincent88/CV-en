@@ -1,34 +1,27 @@
 /* Propriétés générales
 
-            +
-
 Initialisation de la grille pour disposer le Titre + corps du CV
    ----------------------------------------------------------------  */
-
-
-
 body{
-    box-sizing: border-box;
-    font-family: "Montserrat", "Sans-Serif";
-    font-size: 16px;
-    line-height: 1.3;
-    margin: 0;
-    
-    color: #212121;
-    background-color: #ECEFF1;
+   box-sizing: border-box;
+   font-family: "Montserrat", "Sans-Serif";
+   font-size: 16px;
+   line-height: 1.3;
+   margin: 0;
+   color: #212121;
+   background-color: #ECEFF1;
 
-    display: grid;
-    grid-template-areas:
-        "photo header header"
-        "nav   main   main";
+   display: grid;
+   grid-template-areas:
+      "photo header header"
+      "nav   main   main";
 
-    grid-template-columns: 28% 1fr;
-    grid-template-rows: 230px 1fr;
+   grid-template-columns: 30% 1fr 1fr;
+   grid-template-rows: 230px auto;
 }
 
 h1, h2, h3{
-    text-transform: uppercase;
-
+   text-transform: uppercase;
 }
 
 /* Propriétés sidebar */
@@ -36,12 +29,9 @@ h1, h2, h3{
 .fig-maphoto{
    grid-area: photo;
    background-color: #42A5F5;
-
    margin: 0;
-
    text-align: center;
    padding: 45px 0 25px;
-
    box-shadow: 0px 5px 5px black;
 }
 
@@ -68,9 +58,17 @@ h1, h2, h3{
 
 }
 
+.sidebar_titre{
+   margin: 0;
+}
+
+.sidebar-link{
+   color: #000000;
+}
+
 .sidebar p{
    text-align: justify;
-   margin: 30px;
+   margin: 1em;
 }
 
 .sidebar .fig-maphoto{
@@ -100,13 +98,27 @@ h1, h2, h3{
    color: black;
 }
 
-.sidebar-icones{
-   display: flex;
-   justify-content: space-around;
-   margin: 30px 45px 30px;
+.sidebar-about p{
+   line-height: 1.5rem;
 }
 
-.sidebar-icones i{
+.sidebar-softSkills ul{
+   line-height: 2em;
+}
+
+.sidebar-icones{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   margin: 20px 0;
+}
+
+.sidebar-icones_group{
+   display: flex;
+   justify-content: space-around;
+}
+
+.sidebar-icones_group > *{
    display: flex;
    justify-content: center;
    align-items: center;
@@ -115,47 +127,11 @@ h1, h2, h3{
    border: 3px solid #212121;
    border-radius: 50%;
    line-height: 1.5em;
-
    color: #212121;
    margin: 9px;
    font-weight: 600;
-   font-size: 2.6em;
-}
-
-.sidebar-skills h3{
-   text-align: center;
-   text-decoration: underline;
-   margin: 0;
-}
-
-.sidebar-skills-icons-container{
-   display: flex;
-   justify-content: space-around;
-   margin: 10px 45px 30px;
-}
-
-.sidebar-skills-icons-container i{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-width: 60px;
-   min-height: 60px;
-   line-height: 1.5em;
-
-   color: #212121;
-   margin: 0 9px;
-   font-weight: 600;
-   font-size: 2.6em;
-}
-
-.sidebar-skills-icons{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-
-.sidebar-icones .fa-atom{
-   display: none;
+   font-size: 2.3em;
+   flex-basis: 60px;
 }
 
 .circle{
@@ -170,8 +146,6 @@ h1, h2, h3{
    border-radius: 50% 50%;
    margin: 9px;
 }
-
-
 
 /* Propriétés du corps du CV */
 
@@ -205,23 +179,18 @@ h1, h2, h3{
 
 .corpsCV{
    grid-area: main;
-
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
-
    margin-left: 7%;
    margin-right: 5%;
-
 }
 
 .corpsCV_titre{
    border-bottom: 2px solid #42A5F5;
    padding-bottom: 5px;
    margin: 25px 0;
-
 }
-
 
 .corpsCV i{
    color: #42A5F5;
@@ -287,21 +256,17 @@ h1, h2, h3{
 
 /* RESPONSIVE DESIGN PROPERTIES START */
 
-
-
 /* ------- RESPONSIVE TABLETTE ---------------- */
-
-
 
 @media screen and (max-width: 920px) and (min-width: 615px){
    body{
-   grid-template-areas:
-   "photo header"
-   "main   main "
-   "nav    nav  ";
+      grid-template-areas:
+      "photo  header"
+      "main  main "
+      " nav  nav   ";
 
-   grid-template-columns: 28% 1fr;
-   grid-template-rows: 9% auto;
+      grid-template-columns: 28% 1fr;
+      grid-template-rows: 9% auto;
    }
 
    .corpsCV{
@@ -311,7 +276,9 @@ h1, h2, h3{
    .fig-maphoto{
       padding-top: 25px;
       background-color: #42A5F5;
+      box-shadow: 0 0 0;
    }
+
    .moi{
       grid-area: header;
       margin: 0;
@@ -328,54 +295,40 @@ h1, h2, h3{
       border-bottom: 1px solid #ECEFF1;
    }
 
-   .references__ref1{
-      width: 45%;
-      text-align: center;
-   }
-
-   .references__ref2{
-      width: 45%;
-      text-align: center;
-   }
-
    .sidebar{
-      display: flex;
+      grid-area: nav;
       flex-flow: row wrap;
+      justify-content: stretch;
+      align-content: flex-start;
    }
 
-   .sidebar-contact{
-      min-width: 50%;
-      display: flex;
-      flex-direction: column;
+   .sidebar h2{
+      margin: 0;
+   }
+
+   .sidebar_titre{
+      box-shadow: 0 0 0;
+   }
+
+   .sidebar-section{
+      justify-content: flex-start;
+      flex-basis: 49%;
+      flex-grow: 1;
+      border-right: 1px solid black;
    }
 
    .sidebar-contact p{
       text-align: center;
-      margin: 20px 0;
    }
 
-   .sidebar-aproposdemoi{
-      min-width: 50%;
-   }
-
-   .sidebar-aproposdemoi p{
+   .sidebar-about p{
       margin: 0;
       padding: 30px;
-      border-left: 1px solid black;
-   }
-
-   .sidebar-loisirs{
-      flex: 1;
-   }
-
-   .sidebar-icones .fa-atom{
-   display:inline-block;
    }
 
 }
 
-/* ------------------------------------------------------------------------                RESPONSIVE MOBILE LARGE SCREEN
-   ------------------------------------------------------------------------ */
+/* -----  RESPONSIVE MOBILE LARGE SCREEN  ------ */
 
 
 @media screen and (max-width:614px){
@@ -416,10 +369,6 @@ h1, h2, h3{
 
    .fig-maphoto{
       padding: 20px 0 20px 0;
-   }
-
-   .sidebar-loisirs__icones .fa-atom{
-      display:none;
    }
 
    .corpsCV_titre{
@@ -464,15 +413,18 @@ h1, h2, h3{
    .sidebar-contact p{
       text-align: center;
    }
+
+   .sidebar-section{
+      padding: 10px;
+   }
 }
 
-/* ------------------------------------------------------------------------                RESPONSIVE MOBILE MEDIEUM/SMALL SCREEN
-   ------------------------------------------------------------------------ */
+/* ----------------- RESPONSIVE MOBILE MEDIEUM/SMALL SCREEN -------------- */
 
 
 @media screen and (max-width:385px){
    body{
-      font-size: .8em;
+      font-size: 1em;
    }
 
    .sidebar p{
