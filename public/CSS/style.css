@@ -20,6 +20,10 @@ body{
    grid-template-rows: 200px auto;
 }
 
+a{
+   color: #000000;
+}
+
 h1, h2, h3{
    text-transform: uppercase;
 }
