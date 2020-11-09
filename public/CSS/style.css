@@ -5,7 +5,7 @@ Initialisation de la grille pour disposer le Titre + corps du CV
 body{
    box-sizing: border-box;
    font-family: "Montserrat", "Sans-Serif";
-   font-size: 15px;
+   font-size: 16px;
    line-height: 1.2;
    margin: 0;
    color: #212121;
