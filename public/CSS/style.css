@@ -106,6 +106,10 @@ h1, h2, h3{
    line-height: 1.5rem;
 }
 
+.sidebar-hardSkills ul li{
+   line-height: 1.5em;
+}
+
 .sidebar-softSkills ul{
    line-height: 2em;
 }
