@@ -1,6 +1,10 @@
-/* Propriétés générales
+/* Propriétés générales */
+:root{
+    --contrast-color: #42A5F5;
+}
 
-Initialisation de la grille pour disposer le Titre + corps du CV
+/*
+    Initialisation de la grille pour disposer le Titre + corps du CV
    ----------------------------------------------------------------  */
 body{
    box-sizing: border-box;
@@ -13,7 +17,7 @@ body{
 
    display: grid;
    grid-template-areas:
-      "photo header header"
+      "nav header header"
       "nav   main   main";
 
    grid-template-columns: 30% 1fr 1fr;
@@ -260,9 +264,24 @@ h1, h2, h3{
    display: flex;
 }
 
+.bloc_projet ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
 .bloc_projet ul li{
    margin: 10px 0;
    font-weight: bold;
+   position: relative;
+}
+
+.bloc_projet ul li::before{
+    content: "\2022";
+    position: absolute;
+    left: -20px;
+    top: -13px;
+    color: #42A5F5;
+    font-size: 2em;
 }
 
 .project-description{

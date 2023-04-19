@@ -1,0 +1,13 @@
+.small-underline{
+    position: relative;
+}
+
+.small-underline::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 70px;
+    height: 1px;
+    background-color: var(--contrast-color);
+}
