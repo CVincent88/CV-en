@@ -275,10 +275,6 @@ h3 {
     position: relative;
 }
 
-.bloc_info ul li ul{
-    padding-left: 0;
-}
-
 .bloc_projet ul li::before {
     content: "\2022";
     position: absolute;
@@ -385,6 +381,10 @@ h3 {
 
         grid-template-columns: auto;
         grid-template-rows: 5% auto;
+    }
+
+    .bloc_info ul li ul{
+        padding-left: 0;
     }
 
     .corpsCV {
