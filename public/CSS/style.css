@@ -318,6 +318,7 @@ h1, h2, h3{
       margin: 0;
       padding-top: 56px;
       padding-left: 39px;
+      padding-bottom: 15px;
       background-color: #42A5F5;
    }
 
@@ -385,6 +386,7 @@ h1, h2, h3{
    .moi{
       margin: 0;
       padding-top: 34px;
+      padding-bottom: 15px;
       background-color: #42A5F5;
    }
 
