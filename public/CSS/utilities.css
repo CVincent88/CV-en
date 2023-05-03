@@ -1,5 +1,6 @@
 .small-underline{
     position: relative;
+    display: inline-block;
 }
 
 .small-underline::before{
