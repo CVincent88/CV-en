@@ -295,7 +295,7 @@ h1, h2, h3{
 @media screen and (max-width: 920px) and (min-width: 615px){
    body{
       grid-template-areas:
-      "photo  header"
+      "header  header"
       "main  main "
       " nav  nav   ";
 
@@ -369,7 +369,7 @@ h1, h2, h3{
    body{
       grid-template-areas:
       "header"
-      "photo"
+      /* "photo" */
       "main"
       "nav";
 

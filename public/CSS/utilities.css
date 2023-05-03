@@ -11,3 +11,9 @@
     height: 1px;
     background-color: var(--contrast-color);
 }
+
+@media screen and (max-width: 920px){
+    .small-underline-header.small-underline::before{
+        display: none;
+    }
+}
