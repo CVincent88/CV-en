@@ -243,6 +243,10 @@ h1, h2, h3{
    min-width: 350px;
 }
 
+.bloc_info-bloc_paragraphe li{
+   padding-top: 4px;
+}
+
 .bloc_info-bloc_paragraphe p{
    margin: 10px 0;
    letter-spacing: 1px;
@@ -410,6 +414,10 @@ h1, h2, h3{
 
    .bloc_info-bloc_paragraphe{
       width: 100%;
+   }
+
+   .bloc_info-bloc_paragraphe ul li{
+    padding-top: 4px;
    }
 
    .bloc_info_titre{
